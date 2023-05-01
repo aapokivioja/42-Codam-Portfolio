@@ -6,7 +6,7 @@
 /*   By: akivioja <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/24 17:50:55 by akivioja      #+#    #+#                 */
-/*   Updated: 2023/04/29 17:21:38 by akivioja      ########   odam.nl         */
+/*   Updated: 2023/05/01 18:36:48 by akivioja      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@
 #define WIDTH		1920
 #define MENU_WIDTH	250
 
+# include <math.h>
 # include <stdlib.h>
 # include <unistd.h>
 # include <fcntl.h>
@@ -67,6 +68,20 @@ typedef struct
 	void	*win_ptr;
 
 }	r_fdf;
+
+typedef struct
+{
+	int x;
+	int y;
+	int x0;
+	int y0;
+	int x1;
+	int y1;
+	int dx;
+	int dy;
+	int	slope;
+	int swap;
+}	s_slope;
 
 void parse(char	*filename, r_fdf *data);
 
