@@ -12,6 +12,7 @@ LIBS = -L./minilibx_macos -lmlx -framework OpenGL -framework AppKit
 SRCS = \
 	fdf.c \
 	parse.c \
+	draw.c \
 	main.c
 
 OBJS = $(SRCS:.c=.o)

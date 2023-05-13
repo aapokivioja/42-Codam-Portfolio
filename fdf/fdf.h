@@ -6,7 +6,7 @@
 /*   By: akivioja <marvin@codam.nl>                   +#+                     */
 /*                                                   +#+                      */
 /*   Created: 2023/04/24 17:50:55 by akivioja      #+#    #+#                 */
-/*   Updated: 2023/05/01 18:36:48 by akivioja      ########   odam.nl         */
+/*   Updated: 2023/05/13 16:44:13 by akivioja      ########   odam.nl         */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,10 +63,14 @@ typedef struct
 	int	width;
 	int	height;
 	int	**int_matrix;
+	int	zoom;
+	int	color;
+	int	shift_x;
+	int	shift_y;
+	double	angle;
 
 	void	*mlx_ptr;
 	void	*win_ptr;
-
 }	r_fdf;
 
 typedef struct
@@ -84,7 +88,8 @@ typedef struct
 }	s_slope;
 
 void parse(char	*filename, r_fdf *data);
-
+void bresenham(float x, float y, float x1, float y1, r_fdf *data);
+void	draw(r_fdf *data);
 
 
 #endif
